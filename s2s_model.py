@@ -54,7 +54,7 @@ class S2SModel(object):
             output_projection = (w, b)
 
             def sampled_loss(labels, logits):
-                labels = tf.reshape(labels, [-1, 1]
+                labels = tf.reshape(labels, [-1, 1])
                 local_w_t = tf.cast(w_t, tf.float32)
                 local_b = tf.cast(b, tf.float32)
                 local_inputs = tf.cast(logits, tf.float32)
